@@ -1,0 +1,10 @@
+class Solution:
+    def findLucky(self, arr: List[int]) -> int:
+        a=[]
+        for x in arr:
+            if  x == arr.count(x):
+                a.append(x)
+        if len(a) == 0:
+            return -1
+        else:
+            return max(a)    
