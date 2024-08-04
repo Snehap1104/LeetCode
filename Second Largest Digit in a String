@@ -1,0 +1,11 @@
+class Solution:
+    def secondHighest(self, s: str) -> int:
+        arr = []
+        for i in range(len(s)) :
+            if s[i].isnumeric():
+                arr.append(s[i])
+        arr = list(set(arr))
+        arr.sort()
+        if len(arr) < 2 :
+            return -1
+        return int(arr[-2])
