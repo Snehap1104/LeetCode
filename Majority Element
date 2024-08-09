@@ -1,0 +1,9 @@
+class Solution(object):
+    def majorityElement(self, nums):
+        l=set(nums)
+        d={}
+        for i in l:
+            d[nums.count(i)]=i
+            x=max(d.keys())
+        return d[x]    
+        
