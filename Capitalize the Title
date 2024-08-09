@@ -1,0 +1,14 @@
+class Solution:
+    def capitalizeTitle(self, title: str) -> str:
+         x = title.split()
+         l=[]
+         for i in x:
+            if len(i)>2:
+                l.append(i.capitalize())               
+            else:
+                l.append(i.lower())
+         result = " ".join(l)   
+         return result     
+              
+                
+        
