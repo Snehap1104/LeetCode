@@ -1,0 +1,16 @@
+class Solution:
+    def sortByBits(self, arr: List[int]) -> List[int]:
+        ar=[]
+        pr=[]
+        for i in arr:
+            ar.append(bin(i).count('1'))
+        ar.sort()
+        arr.sort()
+        for x in ar:
+            for y in arr:
+                if bin(y).count('1')==x:
+                    pr.append(y)
+                    arr.remove(y)
+                    break
+        return pr            
+        
