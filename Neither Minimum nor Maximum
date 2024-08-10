@@ -1,0 +1,9 @@
+class Solution:
+    def findNonMinOrMax(self, nums: List[int]) -> int:
+        s=list(set(nums))
+        if len(s)<=2:
+            return -1
+        else:
+            s.sort()
+            return s[1]    
+      
