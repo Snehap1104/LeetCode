@@ -1,0 +1,12 @@
+class Solution:
+    def numberOfSpecialChars(self, word: str) -> int:
+        l = set()
+        u = set()
+
+        for letter in word:
+            if letter.islower():
+                l.add(letter)
+            else:
+                u.add(letter.lower())
+        
+        return len(l.intersection(u))
