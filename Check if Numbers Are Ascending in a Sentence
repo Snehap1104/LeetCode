@@ -1,0 +1,10 @@
+class Solution:
+    def areNumbersAscending(self, s: str) -> bool:
+        x = s.split()
+        a=[]
+        for i in x:
+            if i.isnumeric():
+                a.append(int(i))
+        y=sorted(set(a))
+        return y==a
+        
