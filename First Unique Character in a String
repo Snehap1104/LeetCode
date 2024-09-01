@@ -1,0 +1,12 @@
+from collections import Counter
+class Solution:
+    def firstUniqChar(self, s: str) -> int:
+        d = Counter(s)
+        l = []
+        for i in d:
+            if d[i] == 1:
+                l.append(s.index(i))
+        if l == []: 
+            return -1 
+        else:
+             return min(l)          
