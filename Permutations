@@ -1,0 +1,8 @@
+from itertools import permutations as pr
+class Solution:
+    def permute(self, nums: List[int]) -> List[List[int]]:
+        a=[]
+        p = pr(nums)
+        for x in p:
+            a.append(x)
+        return a    
